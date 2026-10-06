@@ -1,0 +1,11 @@
+# Compilação e binários do Java
+build/ 
+dist/ 
+nbproject/private/ 
+nbproject/package-generated.xml 
+nbproject/stackdump.txt 
+*.class
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
