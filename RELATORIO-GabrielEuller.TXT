@@ -1,1 +1,9 @@
+```
+Data 06/10/2026 ; 
+Horas Trabalhadas 30 min ; 
+Tipo Tarefa: Codificar módulo; 
+Descrição da Tarefa Realizada: Implementação da classe Celula e do construtor da ListaIdentificadores (com nó sentinela e ponteiro tail) no pacote estrutura
+
+```
+
 
