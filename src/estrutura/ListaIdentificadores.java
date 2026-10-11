@@ -22,4 +22,45 @@ public class ListaIdentificadores {
         
     }
     
+    
+    public void inserir(long id){
+        Celula nova  = new Celula(id);
+        this.tail.prox = nova;
+        this.tail = nova;
+        this.quantidade++;
+    }
+    
+    public boolean contem(int id){
+        Celula atual = this.head.prox;
+        
+        while(atual != null){
+            if(atual.id == id){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    
+    @Override
+    public String toString(){
+        StringBuilder sb =  new StringBuilder();
+        sb.append("[");
+        
+        Celula atual = this.head.prox;
+        
+        while(atual!=null){
+            sb.append(atual.id);
+            if(atual.prox != null){
+                sb.append( "," );
+            }
+            atual = atual.prox;
+        }
+        
+        sb.append("]");
+        return sb.toString();
+    }
+    
 }
+
+

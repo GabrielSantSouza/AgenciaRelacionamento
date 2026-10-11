@@ -5,5 +5,9 @@ Tipo Tarefa: Codificar módulo;
 Descrição da Tarefa Realizada: Implementação da classe Celula e do construtor da ListaIdentificadores (com nó sentinela e ponteiro tail) no pacote estrutura
 
 ```
+Data 08/10/2026 ;
+Horas trabalhadas 1h;
+Tipo Tarefa Codificar modulo e corrigir erros;
+Descrição da Tarefa Realizada: Implementação dos métodos inserir, contem e toString na classe ListaIdentificadores // Correção do erro de OutOfMemoryError no método toString corrigindo o avanço do ponteiro de iteração da lista encadeada.
 
-
+```
