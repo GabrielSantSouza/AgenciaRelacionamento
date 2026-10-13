@@ -11,3 +11,10 @@ Tipo Tarefa Codificar modulo e corrigir erros;
 Descrição da Tarefa Realizada: Implementação dos métodos inserir, contem e toString na classe ListaIdentificadores // Correção do erro de OutOfMemoryError no método toString corrigindo o avanço do ponteiro de iteração da lista encadeada.
 
 ```
+DATA 12/10/2026;
+Horas trabalhadas 30 min;
+Tipo Tarefa: criação de classe;
+Descrição da tarefa: Implementação da classe candidato com seus gettters e criação do enum para as siglas dos estados;
+
+```
+
