@@ -41,6 +41,10 @@ public class ListaIdentificadores {
         return false;
     }
     
+
+    public int getQuantidade() {
+        return this.quantidade;
+    }
     
     @Override
     public String toString(){
