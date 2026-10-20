@@ -113,7 +113,7 @@ public class Candidato {
         
     }
     
-    public boolean VerificaPotencialCompanheiro(Candidato v, int grauDesejado){
+    public boolean verificaPotencialCompanheiro(Candidato v, int grauDesejado){
         if(v == null || v.getId() == this.getId()){
             return false;
         }
@@ -131,6 +131,9 @@ public class Candidato {
         return grauObtido >= grauDesejado;
     }
     
+    public void limparCompanheiros(){
+        this.potenciaisCompanheiros = new ListaIdentificadores();
+    }
     
     
     

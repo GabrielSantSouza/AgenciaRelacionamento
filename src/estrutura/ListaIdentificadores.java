@@ -46,6 +46,10 @@ public class ListaIdentificadores {
         return this.quantidade;
     }
     
+     public Celula getPrimeiro() {
+        return this.head.prox;
+    }
+    
     @Override
     public String toString(){
         StringBuilder sb =  new StringBuilder();
