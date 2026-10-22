@@ -1,45 +1,53 @@
-Data 06/10/2026 ; Horas Trabalhadas: 30 min ; 
+Data 06/10/2026 ; 
+Horas Trabalhadas: 30 min ; 
 Tipo Tarefa: Codificar módulo ;
 Descrição da Tarefa Realizada: Implementação da classe Celula e do construtor da ListaIdentificadores com nó sentinela e ponteiro tail no pacote estrutura.
-
+Quem:Gabriel
 
 Data 08/10/2026 ;
 Horas trabalhadas 1h;
 Tipo Tarefa Codificar modulo;
 Descrição da Tarefa Realizada: Implementação dos métodos inserir, contem e toString na classe ListaIdentificadores // Correção do erro de OutOfMemoryError no método toString corrigindo o avanço do ponteiro de iteração da lista encadeada.
+Quem: Gabriel 
 
 Data 10/10/2026;
 Horas trabalhadas 30 min;
 Tipo Tarefa: Diagnosticar e corrigir problemas encontrados;
 Descrição da Tarefa Realizada: Correção de erro no método toString ajustando o avanço do ponteiro de iteração para evitar estouro de memória.
+Quem: Euller;
 
 Data 12/10/2026;
 Horas trabalhadas 30 min;
 Tipo Tarefa: Codificar modulo;
 Descrição da tarefa: implementação da classe Candidato com seus atributos/getters e criação do Enum Estado para validação de siglas de UF;
+Quem: Euller;
 
 Data 13/10/2026 ; 
 Horas Trabalhadas: 1h ; 
 Tipo Tarefa: Codificar módulo ; 
 Descrição da Tarefa Realizada: Implementação dos métodos de cálculo de peso por áreas de interesse e de verificação de potencial companheiro (estado, orientação sexual mútua e grau de compatibilidade) na classe Candidato.
+Quem: Gabriel;
 
 Data 15/10/2026 ; 
 Horas Trabalhadas: 30 min ; 
 Tipo Tarefa: Diagnosticar e corrigir os problemas encontrados ; 
 Descrição da Tarefa Realizada: Correção do loop infinito no método contem da ListaIdentificadores adicionando o avanço do ponteiro e ajustando a assinatura para o tipo long.
+Quem: Euller;
 
 Data 16/10/2026 ; 
 Horas Trabalhadas: 1h ; 
 Tipo Tarefa: Codificar módulo ; 
 Descrição da Tarefa Realizada: Implementação das 6 tarefas de consulta, filtragem e ordenação/ranking Top-K na classe GerenciadorCandidatos e criação do LeitorArquivo no pacote io.
+Quem: Euller;
 
 Data 18/10/2026 ; 
 Horas Trabalhadas: 30 min ; 
 Tipo Tarefa: Codificar módulo ; 
 Descrição da Tarefa Realizada: Implementação da classe Main no pacote app com menu interativo. 
+Quem: Gabriel
 
 Data 18/10/2026 ; 
 Horas Trabalhadas: 30 min ; 
 Tipo Tarefa: Realizar os testes ; 
 Descrição da Tarefa Realizada: Testes de integração entre o arquivo Candidatos.TXT, o leitor de arquivo e a execução interativa de todas as opções do menu no terminal. 
-
+Quem: Gabriel
