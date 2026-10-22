@@ -171,6 +171,34 @@ public class GerenciadorCandidatos {
         }
     }
     
+    public long gerarProximoId() {
+        long maxId = 0;
+        for (int i = 0; i < quantidade; i++) { 
+            if (candidatos[i] != null && candidatos[i].getId() > maxId) {
+                maxId = candidatos[i].getId();
+
+            }
+        }
+        return maxId + 1;
+    }
+    
+    public void adicionarNovoCandidato(Candidato novo){
+        if (novo==null){
+            return;
+        }
+        if (this.candidatos == null || this.quantidade <= this.candidatos.length){
+            int novoTamanho = (this.candidatos == null) ? 1 : this.candidatos.length + 1;
+            Candidato[] novoVetor = new Candidato[novoTamanho];
+            
+            for (int i = 0; i < this.quantidade; i++) { 
+                novoVetor[i] = this.candidatos[i]; 
+            } this.candidatos = novoVetor;
+        }
+        this.candidatos[this.quantidade++] = novo;
+        recalcularTodosPares();
+        System.out.println("\n Candidato \"" + novo.getNome() + "\" (ID: " + novo.getId() + ") cadastrado e pares recalculados com sucesso!");
+    }
+    
     
 }
     
