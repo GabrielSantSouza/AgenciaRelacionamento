@@ -30,15 +30,15 @@ public class ListaIdentificadores {
         this.quantidade++;
     }
     
-    public boolean contem(int id){
+    public boolean contem(long id) {
         Celula atual = this.head.prox;
-        
-        while(atual != null){
-            if(atual.id == id){
+        while (atual != null) {
+            if (atual.id == id) {
                 return true;
             }
-        }
-        return false;
+            atual = atual.prox; 
+        } 
+        return false; 
     }
     
 

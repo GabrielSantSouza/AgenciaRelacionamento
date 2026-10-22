@@ -17,4 +17,9 @@ Tipo Tarefa: criação de classe;
 Descrição da tarefa: Implementação da classe candidato com seus gettters e criação do enum para as siglas dos estados;
 
 ```
+* ListaIdentificadores.java: Adicionada a instrução atual = atual.prox; para corrigir o travamento por loop infinito no método contem. O parâmetro do método também teve o tipo corrigido de int para long.
+ * Candidato.java: Ajustadas as assinaturas dos métodos do TAD para o paradigma Orientado a Objetos (onde o próprio objeto this chama a execução). O método verificaPotencialCompanheiro foi ajustado para validar estado, orientação sexual recíproca e a soma dos pesos das áreas de interesse em comum.
+ * GerenciadorCandidatos.java: Concluído o método carregarCandidatos para realizar o parsing completo do arquivo Candidatos.TXT (lendo delimitadores **, dados cadastrais e listas de interesse). Implementado o recálculo automático de pares e todas as 6 tarefas de consulta, filtragem e ordenação/ranking.
 
+
+* Criação de uma classe para fazer a leitura do arquivo com os candidatos e atualização da classe GerenciadorCandidatos para que o metódo carregarCandidatos deixe de fazer a leitura do arquivo e somente chame recalcularTodosPares

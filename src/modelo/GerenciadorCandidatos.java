@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import estrutura.Celula;
 import estrutura.ListaIdentificadores;
+import io.LeitorArquivo;
 import modelo.Candidato; 
 import modelo.Estado;
 /**
@@ -25,55 +26,37 @@ public class GerenciadorCandidatos {
         this.quantidade = 0;
     }
     
+    public int getGrauInteresseAtual() {
+        return this.grauInteresseAtual;
+    }
+    
+    public void setGrauInteresseAtual(int novoGrau) {
+        this.grauInteresseAtual = novoGrau;
+        System.out.println("Grau de interesse alterado para: " + novoGrau);
+        recalcularTodosPares(); 
+    }
+    
     public boolean CarregarCandidatos(String caminhoArquivo){
-        File arquivo =  new File(caminhoArquivo);
+        Candidato[] lidos = LeitorArquivo.lerCandidatos(caminhoArquivo);
         
-        if (!arquivo.exists()) { 
-            System.out.println("Erro: O arquivo " + caminhoArquivo + " não foi encontrado."); 
+        if (lidos == null || lidos.length == 0) { 
             return false; 
         }
         
-       try (Scanner scanner = new Scanner(arquivo)) {
-            if (!scanner.hasNextInt()) return false;
-            int n = scanner.nextInt();
-            scanner.nextLine();
-
-            this.candidatos = new Candidato[n];
-            this.quantidade = 0;
-            long idContador = 1;
-
-            while (scanner.hasNext() && quantidade < n) {
-                if (scanner.hasNext("\\*\\*\\*\\*")) {
-                    scanner.nextLine();
-                }
-
-                if (!scanner.hasNextLine()) break;
-                String nome = scanner.nextLine().trim();
-
-                String siglaEstado = scanner.nextLine().trim();
-                Estado estado = Estado.deSigla(siglaEstado);
-
-                char sexo = scanner.nextLine().trim().charAt(0);
-                char sexoInteresse = scanner.nextLine().trim().charAt(0);
-
-                Candidato c = new Candidato(idContador++, nome, estado, sexo, sexoInteresse);
-
-                int numAreas = scanner.nextInt();
-                for (int i = 0; i < numAreas; i++) {
-                    c.adicionarInteresse(scanner.nextInt());
-                }
-                if (scanner.hasNextLine()) {
-                    scanner.nextLine();
-                }
-
-                this.candidatos[quantidade++] = c;
+        this.candidatos = lidos;
+        
+        int cont = 0;
+        for(Candidato c : lidos){
+            if(c!=null){
+                cont++;
             }
-            recalcularTodosPares();
-            return true;
-        } catch (FileNotFoundException e) {
-            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
-            return false;
         }
+        this.quantidade = cont;
+      
+        recalcularTodosPares();
+        System.out.println("Sucesso: " + this.quantidade + " candidatos carregados com sucesso!");
+        return true;
+            
     }
        
     public void recalcularTodosPares() {
