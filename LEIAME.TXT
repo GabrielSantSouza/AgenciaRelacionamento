@@ -1,1 +1,117 @@
+```
+===============================================================================
+               SISTEMA DE AGÊNCIA DE RELACIONAMENTO (AEDS1)
+                                LEIAME.TXT
+===============================================================================
 
+Aluno: Gabriel Santos e Euller
+Disciplina: Algoritmos e Estruturas de Dados I (AEDS1)
+Instituição: CEFET-MG - Campus Timóteo
+Professor: Luciano Moreira
+
+-------------------------------------------------------------------------------
+1. VISÃO GERAL DO SISTEMA
+-------------------------------------------------------------------------------
+O Sistema de Agência de Relacionamento é uma aplicação desenvolvida em Java 
+para automatizar a identificação inicial de potenciais pares/companheiros para 
+encontros. 
+
+A ferramenta realiza o cruzamento cadastral entre candidatos considerando:
+- Residência no mesmo estado (UF);
+- Preferência sexual recíproca/mútua;
+- Grau de interesse mínimo compartilhado (soma dos pesos das áreas de interesse em comum).
+
+Toda a manipulação de listas (interesses e companheiros) foi implementada 
+utilizando Estruturas de Dados Dinâmicas Puras (Lista Encadeada Simples com 
+nó sentinela e ponteiro tail), sem o uso de coleções prontas do Java (como 
+ArrayList ou LinkedList).
+
+-------------------------------------------------------------------------------
+2. ESTRUTURA E ORGANIZAÇÃO DOS PACOTES
+-------------------------------------------------------------------------------
+- src/estrutura/
+  ├── Celula.java: Nó da lista encadeada.
+  └── ListaIdentificadores.java: TAD Lista Encadeada Simples para IDs.
+
+- src/modelo/
+  ├── Estado.java: Enum das 27 Unidades Federativas do Brasil.
+  ├── Candidato.java: TAD Candidato com dados cadastrais e métodos de cálculo.
+  └── GerenciadorCandidatos.java: Serviço com as regras de negócio e consultas.
+
+- src/io/
+  └── LeitorArquivo.java: Classe responsável por ler e parsear o arquivo candidatos.txt.
+
+- src/app/
+  └── Main.java: Classe principal com a interface de menu interativo no terminal.
+
+-------------------------------------------------------------------------------
+3. FORMATO DO ARQUIVO DE ENTRADA (Candidatos.TXT)
+-------------------------------------------------------------------------------
+O arquivo de dados de candidatos deve seguir a seguinte estrutura exata:
+
+N (número total de candidatos)
+****
+Nome do Candidato
+sigla_estado (ex: MG)
+sexo (F ou M)
+sexo_interesse (F, M ou I - para Indiferente)
+numero_areas (quantidade de áreas escolhidas)
+area_1 area_2 ... (códigos das áreas de 1 a 8 separados por espaço)
+****
+...
+
+Código das Áreas de Interesse e seus Pesos:
+- Peso 1: 1-ESPORTES | 3-MÚSICA | 4-CINEMA
+- Peso 2: 2-ARTES | 6-ANIMAIS | 7-GASTRONOMIA
+- Peso 3: 5-TECNOLOGIA | 8-CIÊNCIAS
+
+-------------------------------------------------------------------------------
+4. COMO COMPILAR E EXECUTAR
+-------------------------------------------------------------------------------
+
+--- Opção A: Pelo Apache NetBeans (Recomendado) ---
+1. Abra o NetBeans IDE.
+2. Acesse: Arquivo -&gt; Abrir Projeto -&gt; Selecione a pasta "AgenciaRelacionamento".
+3. Certifique-se de que o arquivo "Candidatos.TXT" está localizado em "src/modelo/Candidatos.TXT" ou na raiz do projeto.
+4. Pressione F6 (ou clique no botão "Executar Projeto").
+
+--- Opção B: Pelo Terminal / Linha de Comando ---
+1. Abra o terminal no diretório raiz do projeto (onde fica a pasta 'src').
+2. Compile todas as classes:
+   javac -d build/classes src/estrutura/*.java src/modelo/*.java src/io/*.java src/app/*.java
+
+3. Execute a aplicação:
+   java -cp build/classes app.Main
+
+-------------------------------------------------------------------------------
+5. COMO UTILIZAR O MENU INTERATIVO
+-------------------------------------------------------------------------------
+Ao iniciar o programa, o arquivo de candidatos será carregado automaticamente.
+O menu principal exibirá as seguintes opções:
+
+[1] Ajustar Grau de Interesse Desejado:
+    Permite alterar a exigência de compatibilidade mínima. Ao alterar, todos os 
+    pares de companheiros de todos os candidatos são recalculados na hora.
+
+[2] Consultar Potenciais Companheiros de um Candidato:
+    Solicita o ID de um candidato e exibe seu nome, a quantidade de pares e a 
+    lista com os IDs e nomes dos potenciais companheiros.
+
+[3] Ranking TOP K Candidatos com Mais Companheiros:
+    Solicita um valor K e imprime os K candidatos que possuem a maior 
+    quantidade de companheiros encontrados.
+
+[4] Listar Candidatos Sem Par:
+    Exibe a lista de candidatos que não encontraram nenhum companheiro compatível.
+
+[5] Filtrar Candidatos por Área de Interesse (1-8):
+    Solicita o código de uma área de interesse (1 a 8) e lista todos os 
+    candidatos que possuem essa área cadastrada.
+
+[6] Filtrar Candidatos por Estado (UF):
+    Solicita a sigla de um estado (ex: MG, SP) e exibe os candidatos residentes.
+
+ Sair:
+    Encerra a execução do programa.
+===============================================================================
+```

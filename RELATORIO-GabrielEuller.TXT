@@ -1,27 +1,45 @@
-```
-Data 06/10/2026 ; 
-Horas Trabalhadas 30 min ; 
-Tipo Tarefa: Codificar módulo; 
-Descrição da Tarefa Realizada: Implementação da classe Celula e do construtor da ListaIdentificadores (com nó sentinela e ponteiro tail) no pacote estrutura
+Data 06/10/2026 ; Horas Trabalhadas: 30 min ; 
+Tipo Tarefa: Codificar módulo ;
+Descrição da Tarefa Realizada: Implementação da classe Celula e do construtor da ListaIdentificadores com nó sentinela e ponteiro tail no pacote estrutura.
 
-```
+
 Data 08/10/2026 ;
 Horas trabalhadas 1h;
-Tipo Tarefa Codificar modulo e corrigir erros;
+Tipo Tarefa Codificar modulo;
 Descrição da Tarefa Realizada: Implementação dos métodos inserir, contem e toString na classe ListaIdentificadores // Correção do erro de OutOfMemoryError no método toString corrigindo o avanço do ponteiro de iteração da lista encadeada.
 
-```
-DATA 12/10/2026;
+Data 10/10/2026;
 Horas trabalhadas 30 min;
-Tipo Tarefa: criação de classe;
-Descrição da tarefa: Implementação da classe candidato com seus gettters e criação do enum para as siglas dos estados;
+Tipo Tarefa: Diagnosticar e corrigir problemas encontrados;
+Descrição da Tarefa Realizada: Correção de erro no método toString ajustando o avanço do ponteiro de iteração para evitar estouro de memória.
 
-```
-* ListaIdentificadores.java: Adicionada a instrução atual = atual.prox; para corrigir o travamento por loop infinito no método contem. O parâmetro do método também teve o tipo corrigido de int para long.
- * Candidato.java: Ajustadas as assinaturas dos métodos do TAD para o paradigma Orientado a Objetos (onde o próprio objeto this chama a execução). O método verificaPotencialCompanheiro foi ajustado para validar estado, orientação sexual recíproca e a soma dos pesos das áreas de interesse em comum.
- * GerenciadorCandidatos.java: Concluído o método carregarCandidatos para realizar o parsing completo do arquivo Candidatos.TXT (lendo delimitadores **, dados cadastrais e listas de interesse). Implementado o recálculo automático de pares e todas as 6 tarefas de consulta, filtragem e ordenação/ranking.
+Data 12/10/2026;
+Horas trabalhadas 30 min;
+Tipo Tarefa: Codificar modulo;
+Descrição da tarefa: implementação da classe Candidato com seus atributos/getters e criação do Enum Estado para validação de siglas de UF;
 
+Data 13/10/2026 ; 
+Horas Trabalhadas: 1h ; 
+Tipo Tarefa: Codificar módulo ; 
+Descrição da Tarefa Realizada: Implementação dos métodos de cálculo de peso por áreas de interesse e de verificação de potencial companheiro (estado, orientação sexual mútua e grau de compatibilidade) na classe Candidato.
 
-* Criação de uma classe para fazer a leitura do arquivo com os candidatos e atualização da classe GerenciadorCandidatos para que o metódo carregarCandidatos deixe de fazer a leitura do arquivo e somente chame recalcularTodosPares
+Data 15/10/2026 ; 
+Horas Trabalhadas: 30 min ; 
+Tipo Tarefa: Diagnosticar e corrigir os problemas encontrados ; 
+Descrição da Tarefa Realizada: Correção do loop infinito no método contem da ListaIdentificadores adicionando o avanço do ponteiro e ajustando a assinatura para o tipo long.
 
-* Criação do menu de interação na classe main.
+Data 16/10/2026 ; 
+Horas Trabalhadas: 1h ; 
+Tipo Tarefa: Codificar módulo ; 
+Descrição da Tarefa Realizada: Implementação das 6 tarefas de consulta, filtragem e ordenação/ranking Top-K na classe GerenciadorCandidatos e criação do LeitorArquivo no pacote io.
+
+Data 18/10/2026 ; 
+Horas Trabalhadas: 30 min ; 
+Tipo Tarefa: Codificar módulo ; 
+Descrição da Tarefa Realizada: Implementação da classe Main no pacote app com menu interativo. 
+
+Data 18/10/2026 ; 
+Horas Trabalhadas: 30 min ; 
+Tipo Tarefa: Realizar os testes ; 
+Descrição da Tarefa Realizada: Testes de integração entre o arquivo Candidatos.TXT, o leitor de arquivo e a execução interativa de todas as opções do menu no terminal. 
+
